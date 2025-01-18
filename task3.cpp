@@ -29,7 +29,7 @@ struct Philosopher
     {
         {
             lock_guard<mutex> lockOut(muterOut);
-            cout << "Philosopher " << id << " is thinking" << endl;
+            cout << "Философ " << id << " думает" << endl;
         }
         this_thread::sleep_for(chrono::seconds(2)); // создаем видимость работы
     }
@@ -42,7 +42,7 @@ struct Philosopher
 
         {
             lock_guard<mutex> lockOut(muterOut);
-            cout << "Philosopher " << id << " is eating" << endl;
+            cout << "Философ " << id << " ест" << endl;
         }
         this_thread::sleep_for(chrono::seconds(1)); // создаем видимость работы
     }
